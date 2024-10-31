@@ -1,4 +1,4 @@
-### Application Rules
+## Application Rules
 
 - The application should start by displaying a list of options for what can be done with the app and allow the user to enter a choice to begin.
 - It should be possible to add a contact:
