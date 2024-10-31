@@ -61,14 +61,16 @@ def remove_favorite(contacts, contact_index):
         print("Invalid contact index.")
 
 def view_favorite_contacts(contacts):
-    favorite_contacts = [contact for contact in contacts if contact["favorite"]]
-    if not favorite_contacts:
-        print("\nNo favorite contacts available.\n")
-        return
-    
-    print("\nFavorite List:")
-    for index, contact in enumerate(favorite_contacts, start=1):
-        print(f"{index}. {contact['name']}")
+    has_favorites = False
+
+    print("\nFavorite Contacts List:")
+    for index, contact in enumerate(contacts, start=1):
+        if contact["favorite"]:
+            print(f"{index}. {contact['name']}")
+            print(f"   Phone: {contact['phone']}")
+            print(f"   Email: {contact['email']}")
+            print("-" * 30)  # Linha de separação
+            has_favorites = True
 
 def remove_contact(contacts, contact_index):
     try:
