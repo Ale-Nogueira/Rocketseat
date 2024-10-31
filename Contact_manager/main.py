@@ -18,8 +18,8 @@ def view_contacts(contacts):
         print(f"{index}. [{status}] {contact_name}")
         print(f"Phone: {contact_phone}")
         print(f"Email: {contact_email}")
-        print("-" * 30)  # Separador entre contatos
-    print()  # Nova linha ao final
+        print("-" * 30)  
+    print()  
     return    
 
 def edit_contact(contacts, contact_index, new_contact_name, new_contact_phone, new_contact_email):
